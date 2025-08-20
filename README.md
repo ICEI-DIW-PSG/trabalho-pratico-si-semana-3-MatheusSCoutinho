@@ -10,15 +10,15 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Matheus Sena Coutinho
+- Matricula: 501092 
+- Proposta de projeto escolhida: Lugares e Experiências
+- Breve descrição sobre seu projeto: A ideia do projeto é recomendar e vender passagens aérias e pacotes de experiências para um publico que queira viajar. Recomendando os melhores lugares com otimos preços.
 
 
 ## Print do(s) wireframe(s) criado
 
-<<  COLOQUE A IMAGEM AQUI >>
+<img src="images/Esboço do layout da home-page.png" width="400" height="300" alt="Esboço do layout da home-page">
 
 
 ## Print da home-page criada

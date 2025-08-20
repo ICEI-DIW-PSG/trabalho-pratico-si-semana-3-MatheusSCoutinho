@@ -1,3 +1,223 @@
+:root {
+  --primary: #0077cc;
+  --light: #f4f6f8;
+  --white: #ffffff;
+  --gray-200: #e0e0e0;
+  --gray-800: #333333;
+  --radius: 0.5rem;
+  --gap: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: aquamarine;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--gray-800);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.site-header {
+  background: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap) 0;
+}
+
+.logo {
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gap);
+}
+
+.main-nav a {
+  color: var(--gray-800);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  gap: var(--gap);
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.filter-group label {
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.filter-group select,
+.filter-group input[type="range"] {
+  cursor: pointer;
+}
+
+/* Blocos de pacotes */
+.pacote-bloco {
+  margin-top: 3rem;
+}
+
+.pacote-bloco h2 {
+  margin-bottom: var(--gap);
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.pacotes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gap);
+}
+
+.pacote {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: var(--gap);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+
+.pacote:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.pacote h3 {
+  margin: var(--gap) 0 0.5rem;
+}
+
+.pacote p {
+  margin-bottom: var(--gap);
+  font-weight: 500;
+}
+
+.pacote button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+
+.pacote button:hover {
+  background: #005fa3;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  display: block;
+  flex-shrink: 0;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 0.5rem;
+}
+
+.carousel-btn.next {
+  right: 0.5rem;
+}
+
+/* Rodapé */
+.site-footer {
+  background: var(--white);
+  padding: var(--gap) 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.site-footer p {
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: var(--gap);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

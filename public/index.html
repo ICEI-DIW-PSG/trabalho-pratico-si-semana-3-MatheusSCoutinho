@@ -1,12 +1,231 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Viaje Fácil</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Viaje Fácil</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#cadastro">Cadastro</a></li>
+          <li><a href="#passagens">Passagens</a></li>
+          <li><a href="#pacotes-destinos">Pacotes</a></li>
+          <li><a href="#experiencias">Experiências</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Filtros -->
+            <!-- Lembrando que coloquei os destinos um por um
+             Mas a ideia é que venha de uma base de dados
+             e façamos o tratamento dos dados de acordo com
+             o filtro selecionado. Mas a criterio de deixar
+             mais visivel, optei por colocar um por um aqui 
+             para mera ilustração -->
+  <section class="filters container">
+    <div class="filter-group">
+      <label for="destino-filter">Destino:</label>
+      <select id="destino-filter">
+        <option value="all">Todos</option>
+        <option value="salvador">Salvador</option>
+        <option value="recife">Recife</option>
+        <option value="fortaleza">Fortaleza</option>
+        <option value="gramado">Gramado</option>
+        <option value="angra">Angra dos Reis</option>
+        <option value="bento">Bento Gonçalves</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label for="price-filter">Preço máximo:</label>
+      <input
+        type="range"
+        id="price-filter"
+        min="0"
+        max="3000"
+        step="100"
+        value="3000"
+      />
+      <span id="price-value">R$ 3000</span>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- Passagens -->
+            <!-- Lembrando que coloquei as passagens uma por uma.
+             Mas a ideia é que venha de uma base de dados
+             e façamos o tratamento dos dados de acordo com
+             o filtro selecionado. Mas a criterio de deixar
+             mais visivel, optei por colocar um por um aqui 
+             para mera ilustração -->
+    <section id="passagens" class="pacote-bloco">
+      <h2>✈️ Passagens Aéreas</h2>
+      <div class="pacotes-grid">
+        <article
+          class="pacote"
+          data-destination="salvador"
+          data-price="299"
+        >
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/salvador1.jpg"
+                alt="Praia em Salvador"
+              />
+              <img
+                src="imgs/salvador2.jpg"
+                alt="Pelourinho, Salvador"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>Rio de Janeiro → Salvador</h3>
+          <p>A partir de R$ 299</p>
+          <button>Comprar</button>
+        </article>
+
+        <article
+          class="pacote"
+          data-destination="recife"
+          data-price="349"
+        >
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/recife1.jpg"
+                alt="Praia de Boa Viagem"
+              />
+              <img
+                src="imgs/recife2.jpg"
+                alt="Marco Zero, Recife"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>São Paulo → Recife</h3>
+          <p>A partir de R$ 349</p>
+          <button>Comprar</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pacotes de Destinos -->
+    <section id="pacotes-destinos" class="pacote-bloco">
+      <h2>🌴 Pacotes de Destinos</h2>
+      <div class="pacotes-grid">
+        <article
+          class="pacote"
+          data-destination="fortaleza"
+          data-price="1899"
+        >
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/fortaleza1.jpg"
+                alt="Beira mar, Fortaleza"
+              />
+              <img
+                src="imgs/fortaleza2.jpg"
+                alt="Moreno Beach, Fortaleza"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>Pacote Nordeste Completo</h3>
+          <p>5 dias por R$ 1.899</p>
+          <button>Ver detalhes</button>
+        </article>
+
+        <article
+          class="pacote"
+          data-destination="gramado"
+          data-price="2499"
+        >
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/gramado1.jpg"
+                alt="Lago Negro, Gramado"
+              />
+              <img
+                src="imgs/gramado2.jpg"
+                alt="Rua coberta, Gramado"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>Explorando Amazônia</h3>
+          <p>7 dias por R$ 2.499</p>
+          <button>Ver detalhes</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experiências -->
+    <section id="experiencias" class="pacote-bloco">
+      <h2>🚀 Experiências</h2>
+      <div class="pacotes-grid">
+        <article class="pacote" data-destination="angra" data-price="199">
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/angra1.jpg"
+                alt="Ilha em Angra dos Reis"
+              />
+              <img
+                src="imgs/angra2.jpg"
+                alt="Passeio de barco"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>Tour de barco em Angra dos Reis</h3>
+          <p>R$ 199 por pessoa</p>
+          <button>Agendar</button>
+        </article>
+
+        <article class="pacote" data-destination="bento" data-price="149">
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+            <div class="carousel-track">
+              <img
+                src="imgs/bento1.jpg"
+                alt="Vinícola em Bento Gonçalves"
+              />
+              <img
+                src="imgs/bento2.jpg"
+                alt="Degustação de vinhos"
+              />
+            </div>
+            <button class="carousel-btn next" aria-label="Próximo">›</button>
+          </div>
+          <h3>Degustação de vinhos em Bento Gonçalves</h3>
+          <p>R$ 149 por pessoa</p>
+          <button>Agendar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Viaje Fácil. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
