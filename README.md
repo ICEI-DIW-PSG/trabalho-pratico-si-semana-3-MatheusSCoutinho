@@ -18,9 +18,9 @@ Nessa atividade, você deverá montar a página inicial do projeto escolhido, a 
 
 ## Print do(s) wireframe(s) criado
 
-<img src="images/Esboço do layout da home-page.png" width="400" height="300" alt="Esboço do layout da home-page">
+<img src="public/imgs/EsboçoLayoutHomePage.png" width="400" height="300" alt="Esboço do layout da home-page">
 
 
 ## Print da home-page criada
 
-<<  COLOQUE A IMAGEM AQUI >>
+<img src="public/imgs/PrintHomePage.png" width="400" height="300" alt="Esboço do layout da home-page">
